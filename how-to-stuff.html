@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>How To Stuff - Raspberry Pi</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1501788987" title="wsite-theme-css" />
+
+<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quattrocento" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#626262 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{font-family:"Crimson Text" !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Crimson Text" !important;letter-spacing: 0px !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{font-family:"Crimson Text" !important;}
+#wsite-title {font-family:"Montserrat" !important;}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Playfair Display" !important;letter-spacing: -1px !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {font-family:"Lora" !important;font-weight:400 !important;text-transform:  none !important;}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:18px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{font-size:18px !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-size:31px !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{font-size:12px !important;}
+#wsite-title {font-size:15px !important;}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-size:90px !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"951673527793727506","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"647976914624973512","title":"How To Stuff","url":"how-to-stuff.html","target":"","nav_menu":false,"nonclickable":false},{"id":"670758998972128542","title":"Links","url":"links.html","target":"","nav_menu":false,"nonclickable":false},{"id":"770561053180523824","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false},{"id":"400730029730896295","title":"Article Requests","url":"article-requests.html","target":"","nav_menu":false,"nonclickable":false}],
+			"647976914624973512",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{"hasCustomMembership":true,"hasCustomMinicart":true}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="header-page  wsite-page-how-to-stuff  sticky-nav-on full-width-on header-scroll-animate-off  wsite-theme-light"><div class="wrapper">
+    <div class="unite-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <label class="hamburger"><span></span></label>
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">Raspberry Pi</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg951673527793727506" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="how-to-stuff.html"
+				class="wsite-menu-item"
+				>
+				How To Stuff
+			</a>
+			
+		</li>
+		<li id="pg670758998972128542" class="wsite-menu-item-wrap">
+			<a
+						href="links.html"
+				class="wsite-menu-item"
+				>
+				Links
+			</a>
+			
+		</li>
+		<li id="pg770561053180523824" class="wsite-menu-item-wrap">
+			<a
+						href="about.html"
+				class="wsite-menu-item"
+				>
+				About
+			</a>
+			
+		</li>
+		<li id="pg400730029730896295" class="wsite-menu-item-wrap">
+			<a
+						href="article-requests.html"
+				class="wsite-menu-item"
+				>
+				Article Requests
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <div class="nav membership-cart"><span id="member-login" class="wsite-custom-membership-wrapper"><a href="#" id="wsite-nav-login-a"></a></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: 753px;background-image: url(&quot;/uploads/1/0/0/6/100651956/background-images/1282058208.png&quot;) ;background-repeat: no-repeat ;background-position: 50.00% 0.00% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-12"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:center;">How to install Almost any realtek wifi driver onto your raspberry pi</h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph">Link to commands and downloads:<br />&#8203;http://adf.ly/1mWyey<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/cg-ydT13ga8?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-13"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:center;">Raspberry Pi zero Fm transmitter (Only works with raspberry pi zero)</h2>
+
+<div class="paragraph"><br />Download the .img file <a href="http://adf.ly/1mcuvj" target="_blank">here</a>, use Berryboot to install it onto your raspberry pi zero. Then download Cyberduck (mac) to your computer. Boot your raspberry pi up to the .img file you downloaded and login if needed as: pi (username) raspberry (password). Then go to your computer and open the Cyberduck (mac) or Putty (Windows) and ssh into your raspberry pi zero. Then transfer your .mp3 music files to the directory: /home/pi/Music/<br />Then get onto your raspberry pi zero and go into the terminal. Type this in, but edit the text to play your own files:<br /><span style="color:rgb(199, 37, 78)">sudo /usr/bin/mpg123 -4 -s -Z&nbsp;</span><u style="color:rgb(199, 37, 78)">/home/pi/Music/Test.mp3</u><span style="color:rgb(199, 37, 78)">&nbsp;| sudo /home/pi/pifm/pifm - 88.3</span><br />I have included a test.mp3 file, so that you can test the transmitter. Then solder a antenna onto PIN 4 of your raspberry pi zero. The default broadcasting fm frequency is 88.3, as you can see in the command. You need to replace the "Test.mp3" with your song name. The command is case sensitive, so make sure you type the song name exactly.&nbsp;<br />P.S. You can easily list the songs that you transferred to your pi by using these commands: cd /home/pi/Music/&nbsp;<br />then these two letters: ls<br />You can also change the audio output of the raspberry pi zero. Say, you have a usb audio dongle, or a module that connects to the GPIO header. You can change the audio output by the following command: sudo raspi-config<br />Navigate to the "advanced options" by using your arrow keys, then click "enter". Scroll to the "Audio" option and select which audio output source you want to use. &#8203;</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-18"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:center;">Getting Nextcloud (Personal Storage Service) onto your Raspberry Pi using Berryboot</h2>
+
+<div class="paragraph">1. Download <a href="http://festyy.com/qFGiQg" target="_blank">this</a> image.<br />2. Copy it to a usb flash drive.<br />3. Boot up your Raspberry Pi on berryboot.<br />4. Click menu.<br />5. Click and hold mouse over "Add OS".<br />6. Click add from USB Drive.<br />7. Select usb drive.<br />8. Navigate to the .img file's location.<br />9. Double click on .img and it will copy to your Raspberry Pi.<br />10. Once done copying, click exit.<br />11. Boot into NextCloud OS.&nbsp;<br />12. Make sure you are connected to wifi or ethernet.<br />13. Find out your Raspberry Pi's ip address.<br />14. Type in your Raspberry Pi's ip address in a computer. It should look something like this: 192.168.1.253<br />15. Add a / after the ip address. Also type the word "Nextcloud" after the "/".<br />16. Create user account, then download Nextcloud sync app from <a href="https://nextcloud.com/install/#tab-mobile" target="_blank">here</a>.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-19"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:center;">How to install Gnome Pie from source code</h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">Link to article with commands:<br />&#8203;http://adf.ly/1mjqna<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-right">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/sLAH3VB596M?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-20"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:center;">PoisonTap for Raspberry Pi Zero (Only works with the Raspberry Pi Zero!)</h2>
+
+<div class="paragraph">You Can read more about PoisonTap <a href="http://adf.ly/1mnbRt" target="_blank">here</a>.<br />You can get PoisonTap by doing the following:&nbsp;<br /><span style="color:rgb(98, 98, 98)">1. Download the image from <a href="http://adf.ly/1moE3k" target="_blank">here</a>.<br />2. Copy it to a usb flash drive.</span><br /><span style="color:rgb(98, 98, 98)">3. Boot up your Raspberry Pi on berryboot.</span><br /><span style="color:rgb(98, 98, 98)">4. Click menu.</span><br /><span style="color:rgb(98, 98, 98)">5. Click and hold mouse over "Add OS".</span><br /><span style="color:rgb(98, 98, 98)">6. Click add from USB Drive.</span><br /><span style="color:rgb(98, 98, 98)">7. Select usb drive.</span><br /><span style="color:rgb(98, 98, 98)">8. Navigate to the .img file's location.</span><br /><span style="color:rgb(98, 98, 98)">9. Double click on .img and it will copy to your Raspberry Pi.</span><br /><span style="color:rgb(98, 98, 98)">10. Once done copying, click the "Set as Default" button to allow the Pi to boot up automatically to PoisonTap OS after 10 seconds.<br />11. Click exit.<br />12. Plug the raspberry Pi into a locked PC or Mac. You will need a standard micro usb cable. You need to plug the micro usb side of the cable into the USB otg (Data) plug on the Pi. (Where you usually plug in your otg cable and usb hub)<br />13. Hack Away!!</span></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-21"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:center;">Installation of RTL892EU wifi dongle driver</h2>
+
+<div class="paragraph">1. Go to this <a href="http://linkshrink.net/7tkSBP" target="_blank">link</a> on your Raspberry Pi.<br />2. Download the "install.sh" file.<br />3. Go to your favorite terminal and do: "sudo sh /path/to/sh/file.sh"<br />4. Example: &nbsp;sudo sh ~/detectingdragon77/Downloads/install.sh<br />5. It will automatically compile and install the driver.</div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-11"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div><div id="634478970405719732" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="http://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24XI8BgxbfG2CawsRqg.ayW%2F"+"&opts=16862&num=10&ts=1495384594860");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+</div>
+
+
+
+</div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div>
+  </div>
+
+  <div class="nav mobile-nav">
+    <label class="hamburger"><span></span></label>
+    <ul class="wsite-menu-default">
+    		<li id="pg951673527793727506" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="active" class="wsite-menu-item-wrap">
+    			<a
+    						href="how-to-stuff.html"
+    				class="wsite-menu-item"
+    				>
+    				How To Stuff
+    			</a>
+    			
+    		</li>
+    		<li id="pg670758998972128542" class="wsite-menu-item-wrap">
+    			<a
+    						href="links.html"
+    				class="wsite-menu-item"
+    				>
+    				Links
+    			</a>
+    			
+    		</li>
+    		<li id="pg770561053180523824" class="wsite-menu-item-wrap">
+    			<a
+    						href="about.html"
+    				class="wsite-menu-item"
+    				>
+    				About
+    			</a>
+    			
+    		</li>
+    		<li id="pg400730029730896295" class="wsite-menu-item-wrap">
+    			<a
+    						href="article-requests.html"
+    				class="wsite-menu-item"
+    				>
+    				Article Requests
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'nxe1ajf',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+
+		
+	</body>
+</html>
